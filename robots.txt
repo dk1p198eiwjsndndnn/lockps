@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lockps.online/sitemap.xml
+Sitemap: https://www.lockps.online/sitemap.xml

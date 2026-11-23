@@ -1,6 +1,6 @@
 # Lock PS website
 
-Static site (HTML/CSS/JS, no build step). Live at https://lockps.online
+Static site (HTML/CSS/JS, no build step). Live at https://www.lockps.online
 
 ## Local preview
 
@@ -18,7 +18,7 @@ Open http://localhost:8080 (Copy buttons need https or localhost.)
 3. At your domain registrar, set DNS (or use the exact values Vercel shows):
    - `A` record, name `@`, value `76.76.21.21`
    - `CNAME` record, name `www`, value `cname.vercel-dns.com`
-4. Vercel issues the HTTPS certificate automatically. `www` redirects to `lockps.online` (see `vercel.json`).
+4. Vercel issues the HTTPS certificate automatically. The apex `lockps.online` redirects to `www.lockps.online` (set in Vercel Domains, not in `vercel.json`).
 
 ## After editing
 
