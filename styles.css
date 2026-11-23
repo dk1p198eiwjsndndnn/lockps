@@ -12,7 +12,7 @@
   --card: #fff8e6;
   --ink: #2b1a0a;
   /* Growtopia UI uses Century Gothic Bold; Questrial is the closest free web fallback */
-  --gt: "Century Gothic", CenturyGothic, "URW Gothic", "URW Gothic L", Questrial, "Avant Garde", sans-serif;
+  --gt: "Century Gothic", CenturyGothic, "URW Gothic", "URW Gothic L", Questrial, "Avant Garde", "Noto Sans Thai", "Leelawadee UI", Thonburi, sans-serif;
   --pixel: var(--gt);
   --round: var(--gt);
   --outline: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 3px 0 #000;
