@@ -60,7 +60,7 @@ code, pre { font-family: ui-monospace, Consolas, monospace; }
 .nav-links a:hover { background: rgba(255,255,255,.15); }
 /* Theme music toggle: speaker icon, crossed out when muted */
 .music-btn {
-  margin-inline-start: auto; margin-inline-end: .5rem; min-width: 44px; min-height: 44px;
+  margin-inline-end: .5rem; min-width: 44px; min-height: 44px;
   display: grid; place-items: center; background: rgba(255,255,255,.12);
   border: 2px solid rgba(255,255,255,.5); border-radius: 10px; cursor: pointer;
 }
@@ -74,9 +74,32 @@ code, pre { font-family: ui-monospace, Consolas, monospace; }
   --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 9v6h4l5 5V4L7 9H3zm13.6 3 2.7-2.7-1.4-1.4-2.7 2.7-2.7-2.7-1.4 1.4 2.7 2.7-2.7 2.7 1.4 1.4 2.7-2.7 2.7 2.7 1.4-1.4z'/%3E%3C/svg%3E");
 }
 .nav-links { order: 1; }
-.music-btn { order: 2; }
-.nav-toggle { order: 3; }
-@media (min-width: 761px) { .music-btn { margin-inline-start: 1rem; margin-inline-end: 0; } .nav-links { margin-inline-start: auto; } }
+.lang-wrap { order: 2; }
+.music-btn { order: 3; }
+.nav-toggle { order: 4; }
+/* Language picker: flag + code, opens a small menu */
+.lang-wrap { position: relative; margin-inline-start: auto; margin-inline-end: .5rem; }
+.lang-btn {
+  min-height: 44px; display: flex; align-items: center; gap: .4rem; padding: 0 .65rem;
+  background: rgba(255,255,255,.12); border: 2px solid rgba(255,255,255,.5); border-radius: 10px;
+  color: #fff; font: inherit; font-weight: 700; cursor: pointer;
+}
+.lang-btn:hover, .lang-btn[aria-expanded="true"] { background: rgba(255,255,255,.22); }
+.flag { display: block; width: 24px; height: 16px; border-radius: 3px; box-shadow: 0 0 0 1px rgba(0,0,0,.25); }
+.lang-menu {
+  position: absolute; inset-inline-end: 0; top: calc(100% + 6px); z-index: 20; min-width: 170px;
+  display: grid; padding: .35rem; background: #fff; border: 3px solid var(--ink, #1b1b1b); border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.25);
+}
+.lang-menu[hidden] { display: none; }
+.lang-menu button {
+  display: flex; align-items: center; gap: .6rem; min-height: 44px; padding: 0 .7rem;
+  background: none; border: 0; border-radius: 8px; font: inherit; font-weight: 600; color: #1b1b1b; text-align: start; cursor: pointer;
+}
+.lang-menu button:hover, .lang-menu button:focus-visible { background: #eef4fb; }
+.lang-menu button[aria-checked="true"] { background: #dce9f8; color: var(--blue-dark, #1b5fa8); }
+.lang-menu button[aria-checked="true"]::after { content: "\2713"; margin-inline-start: auto; }
+@media (min-width: 761px) { .lang-wrap { margin-inline-start: 1rem; margin-inline-end: 0; } .music-btn { margin-inline-start: .5rem; margin-inline-end: 0; } .nav-links { margin-inline-start: auto; } }
 .nav-toggle { display: none; background: none; border: 0; color: #fff; font-size: 1.6rem; cursor: pointer; min-width: 44px; min-height: 44px; }
 
 /* Hero */

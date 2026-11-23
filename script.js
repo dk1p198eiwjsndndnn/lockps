@@ -46,7 +46,8 @@ function report(button, ok) {
   clearTimeout(timers.get(button));
   button.removeAttribute("data-copied");
   button.removeAttribute("data-failed");
-  let message = ok ? "Copied!" : "Copy gagal";
+  const msg = window.LOCKPS_COPY_MSG || { ok: "Tersalin!", fail: "Gagal menyalin" };
+  let message = ok ? msg.ok : msg.fail;
   if (message === lastMessage) message += "\u00A0"; // VoiceOver skips identical repeats
   lastMessage = message;
   tip.textContent = "";
@@ -145,6 +146,8 @@ const links = document.querySelector(".nav-links");
 toggle.addEventListener("click", () => {
   const open = links.classList.toggle("open");
   toggle.setAttribute("aria-expanded", open);
+  const m = window.LOCKPS_MENU_LABEL;
+  if (m) toggle.setAttribute("aria-label", open ? m.close : m.open);
 });
 links.addEventListener("click", (e) => {
   if (e.target.tagName === "A") { links.classList.remove("open"); toggle.setAttribute("aria-expanded", false); }

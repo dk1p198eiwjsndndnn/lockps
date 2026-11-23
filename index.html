@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=14" />
+  <link rel="stylesheet" href="styles.css?v=15" />
   <link rel="icon" href="assets/wl.png" />
 </head>
 <body>
@@ -31,9 +31,9 @@
     </button>
     <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false"><span class="bars"></span></button>
     <nav class="nav-links" aria-label="Navigasi utama">
-      <a href="#how-to-play">How to Play</a>
-      <a href="#community">Community</a>
-      <a href="#rules">Rules</a>
+      <a data-i18n="nav_play" href="#how-to-play">How to Play</a>
+      <a data-i18n="nav_comm" href="#community">Community</a>
+      <a data-i18n="nav_rules" href="#rules">Rules</a>
     </nav>
   </header>
 
@@ -54,37 +54,37 @@
 
       <!-- HOW TO PLAY -->
       <section id="how-to-play" class="section" aria-labelledby="how-to-play-heading">
-        <h2 class="section-title" id="how-to-play-heading">How to Play</h2>
+        <h2 data-i18n="h_play" class="section-title" id="how-to-play-heading">How to Play</h2>
         <div class="platforms">
 
           <details class="platform android" open>
             <summary><span class="platform-icon" aria-hidden="true"></span>Android</summary>
             <div class="platform-body">
-              <h3 class="option-title">Opsi 1: Lock PS APK <span class="badge">Recommended</span></h3>
-              <p class="hint">Lock PS APK adalah Growtopia clone yang <strong>langsung connect</strong> ke Lock PS.
+              <h3 class="option-title"><span data-i18n="opt1">Opsi 1: Lock PS APK</span> <span class="badge" data-i18n="rec">Recommended</span></h3>
+              <p data-i18n="hint1" class="hint">Lock PS APK adalah Growtopia clone yang <strong>langsung connect</strong> ke Lock PS.
                 <strong>Tidak perlu</strong> PowerTunnel atau Virtual Host.</p>
               <ol class="howto">
-                <li><strong>Download Lock PS APK</strong>
-                  <a class="btn btn-yellow small" href="https://www.mediafire.com/file/1a76uhoktd8ou30/Lock.apk/file" target="_blank" rel="noopener">Download Lock PS APK</a></li>
-                <li><strong>Install APK</strong>Buka file APK lalu install. Jika diminta, izinkan install dari sumber ini.</li>
-                <li><strong>Play</strong>Buka Lock PS APK lalu klik Play. Selesai!</li>
+                <li><strong data-i18n="s1">Download Lock PS APK</strong>
+                  <a data-i18n="b_download_lock_ps_apk" class="btn btn-yellow small" href="https://www.mediafire.com/file/1a76uhoktd8ou30/Lock.apk/file" target="_blank" rel="noopener">Download Lock PS APK</a></li>
+                <li><strong data-i18n="s2">Install APK</strong><span data-i18n="d3">Buka file APK lalu install. Jika diminta, izinkan install dari sumber ini.</span></li>
+                <li><strong data-i18n="s4">Play</strong><span data-i18n="d5">Buka Lock PS APK lalu klik Play. Selesai!</span></li>
               </ol>
 
-              <h3 class="option-title">Opsi 2: Growtopia Asli + PowerTunnel</h3>
-              <p class="hint">Hanya jika kamu ingin main pakai <strong>APK Growtopia asli</strong>. Butuh PowerTunnel / Virtual Host.</p>
+              <h3 data-i18n="opt2" class="option-title">Opsi 2: Growtopia Asli + PowerTunnel</h3>
+              <p data-i18n="hint2" class="hint">Hanya jika kamu ingin main pakai <strong>APK Growtopia asli</strong>. Butuh PowerTunnel / Virtual Host.</p>
               <ol class="howto">
-                <li><strong>Install Growtopia (Support GTPS)</strong>
-                  <a class="btn btn-blue small" href="https://www.mediafire.com/file/6da2psfzy7jv38w/Growtopia_5.58_SupportGTPS.zip/file" target="_blank" rel="noopener">Download GT V5.58 Support GTPS</a></li>
-                <li><strong>Install PowerTunnel</strong>Download APK lalu install.<br />
-                  <a class="btn btn-blue small" href="https://www.mediafire.com/file/lzcdnvb6j6odsmq/PowerTunnel.apk/file" target="_blank" rel="noopener">Download Power Tunnel APK</a></li>
-                <li><strong>Configure Host Settings</strong>Buka PowerTunnel → ☰ → Host Settings → Host list URL.</li>
-                <li><strong>Paste URL</strong>Copy URL ini lalu paste ke PowerTunnel:
+                <li><strong data-i18n="s6">Install Growtopia (Support GTPS)</strong>
+                  <a data-i18n="b_download_gt_v5_58_support_gtps" class="btn btn-blue small" href="https://www.mediafire.com/file/6da2psfzy7jv38w/Growtopia_5.58_SupportGTPS.zip/file" target="_blank" rel="noopener">Download GT V5.58 Support GTPS</a></li>
+                <li><strong data-i18n="s7">Install PowerTunnel</strong><span data-i18n="d8">Download APK lalu install.</span><br />
+                  <a data-i18n="b_download_power_tunnel_apk" class="btn btn-blue small" href="https://www.mediafire.com/file/lzcdnvb6j6odsmq/PowerTunnel.apk/file" target="_blank" rel="noopener">Download Power Tunnel APK</a></li>
+                <li><strong data-i18n="s9">Configure Host Settings</strong><span data-i18n="d10">Buka PowerTunnel → ☰ → Host Settings → Host list URL.</span></li>
+                <li><strong data-i18n="s11">Paste URL</strong><span data-i18n="d12">Copy URL ini lalu paste ke PowerTunnel:</span>
                   <pre><code id="android-url">https://www.lockps.online/host/android.txt</code></pre>
-                  <span class="copy"><button type="button" class="copy-btn" command="--copy" commandfor="android-url">Copy URL</button><span class="tip" role="status"></span></span></li>
-                <li><strong>Start</strong>Set Update period ke <em>On start</em>, lalu tekan Start.<br />
-                  Kalau URL gagal, pakai file Virtual Host:<br />
-                  <a class="btn btn-blue small" href="https://www.mediafire.com/file/2lvetpu6xmny0dh/NovaPSNewEra.txt/file" target="_blank" rel="noopener">Download Virtual Host File</a></li>
-                <li><strong>Launch Growtopia</strong>Buka Growtopia lalu klik Play.</li>
+                  <span class="copy"><button data-i18n="c_copy_url" type="button" class="copy-btn" command="--copy" commandfor="android-url">Copy URL</button><span class="tip" role="status"></span></span></li>
+                <li><strong data-i18n="s13">Start</strong><span data-i18n="d14">Set Update period ke <em>On start</em>, lalu tekan Start.</span><br />
+                  <span data-i18n="vhost">Kalau URL gagal, pakai file Virtual Host:</span><br />
+                  <a data-i18n="b_download_virtual_host_file" class="btn btn-blue small" href="https://www.mediafire.com/file/2lvetpu6xmny0dh/NovaPSNewEra.txt/file" target="_blank" rel="noopener">Download Virtual Host File</a></li>
+                <li><strong data-i18n="s15">Launch Growtopia</strong><span data-i18n="d16">Buka Growtopia lalu klik Play.</span></li>
               </ol>
             </div>
           </details>
@@ -92,19 +92,19 @@
           <details class="platform apple">
             <summary><span class="platform-icon" aria-hidden="true"></span>iOS</summary>
             <div class="platform-body">
-              <p class="hint"><strong>Growtopia v5.59+</strong> butuh certificate GTPS Cloud. Install hanya dari link resmi di bawah.</p>
+              <p data-i18n="hint3" class="hint"><strong>Growtopia v5.59+</strong> butuh certificate GTPS Cloud. Install hanya dari link resmi di bawah.</p>
               <ol class="howto">
-                <li><strong>Download Certificate</strong>Buka link ini di Safari. iOS akan bilang profile sudah di-download.
+                <li><strong data-i18n="s17">Download Certificate</strong><span data-i18n="d18">Buka link ini di Safari. iOS akan bilang profile sudah di-download.</span>
                   <pre><code id="ios-cert">https://www.lockps.online/host/lockps-root-ca.crt</code></pre>
-                  <span class="copy"><button type="button" class="copy-btn" command="--copy" commandfor="ios-cert">Copy Certificate URL</button><span class="tip" role="status"></span></span></li>
-                <li><strong>Install Profile</strong>Settings → General → VPN &amp; Device Management → pilih profile GTPS Cloud → Install.</li>
-                <li><strong>Enable Full Trust</strong>Settings → General → About → Certificate Trust Settings → aktifkan GTPS Root CA.</li>
-                <li><strong>Install Surge 5</strong>Download dan install Surge 5 dari App Store.</li>
-                <li><strong>Import Profile</strong>Buka Default.conf → IMPORT → Download Profile from URL.</li>
-                <li><strong>Paste URL &amp; Setup</strong>Paste URL ini ke Surge, tap SETUP, lalu allow VPN profile.
+                  <span class="copy"><button data-i18n="c_copy_certificate_url" type="button" class="copy-btn" command="--copy" commandfor="ios-cert">Copy Certificate URL</button><span class="tip" role="status"></span></span></li>
+                <li><strong data-i18n="s19">Install Profile</strong><span data-i18n="d20">Settings → General → VPN &amp; Device Management → pilih profile GTPS Cloud → Install.</span></li>
+                <li><strong data-i18n="s21">Enable Full Trust</strong><span data-i18n="d22">Settings → General → About → Certificate Trust Settings → aktifkan GTPS Root CA.</span></li>
+                <li><strong data-i18n="s23">Install Surge 5</strong><span data-i18n="d24">Download dan install Surge 5 dari App Store.</span></li>
+                <li><strong data-i18n="s25">Import Profile</strong><span data-i18n="d26">Buka Default.conf → IMPORT → Download Profile from URL.</span></li>
+                <li><strong data-i18n="s27">Paste URL &amp; Setup</strong><span data-i18n="d28">Paste URL ini ke Surge, tap SETUP, lalu allow VPN profile.</span>
                   <pre><code id="ios-url">https://www.lockps.online/host/ios.conf</code></pre>
-                  <span class="copy"><button type="button" class="copy-btn" command="--copy" commandfor="ios-url">Copy URL</button><span class="tip" role="status"></span></span></li>
-                <li><strong>Launch Growtopia</strong>Buka Growtopia lalu klik Play.</li>
+                  <span class="copy"><button data-i18n="c_copy_url" type="button" class="copy-btn" command="--copy" commandfor="ios-url">Copy URL</button><span class="tip" role="status"></span></span></li>
+                <li><strong data-i18n="s29">Launch Growtopia</strong><span data-i18n="d30">Buka Growtopia lalu klik Play.</span></li>
               </ol>
             </div>
           </details>
@@ -113,19 +113,19 @@
             <summary><span class="platform-icon" aria-hidden="true"></span>Windows</summary>
             <div class="platform-body">
               <ol class="howto">
-                <li><strong>Install Growtopia (Support GTPS)</strong>
-                  <a class="btn btn-yellow small" href="https://drive.google.com/file/d/1hiiH8KI2JTLLdWNUgSz6-ZRv3Cg06YC3/view?usp=sharing" target="_blank" rel="noopener">Download GT V5.57 Support GTPS (Windows)</a></li>
-                <li><strong>Download Certificate</strong>
-                  <a class="btn btn-blue small" href="https://www.lockps.online/host/lockps-root-ca.crt" target="_blank" rel="noopener">Download Lock PS Root CA</a></li>
-                <li><strong>Install Certificate</strong>Double-click file → Install Certificate → pilih <em>Local Machine</em>.</li>
-                <li><strong>Choose Trusted Root Store</strong>Pilih "Place all certificates in the following store" → <em>Trusted Root Certification Authorities</em>.</li>
-                <li><strong>Run Notepad as Administrator</strong></li>
-                <li><strong>Open hosts file</strong>File → Open, lalu buka:
+                <li><strong data-i18n="s31">Install Growtopia (Support GTPS)</strong>
+                  <a data-i18n="b_download_gt_v5_57_support_gtps_windows" class="btn btn-yellow small" href="https://drive.google.com/file/d/1hiiH8KI2JTLLdWNUgSz6-ZRv3Cg06YC3/view?usp=sharing" target="_blank" rel="noopener">Download GT V5.57 Support GTPS (Windows)</a></li>
+                <li><strong data-i18n="s32">Download Certificate</strong>
+                  <a data-i18n="b_download_lock_ps_root_ca" class="btn btn-blue small" href="https://www.lockps.online/host/lockps-root-ca.crt" target="_blank" rel="noopener">Download Lock PS Root CA</a></li>
+                <li><strong data-i18n="s33">Install Certificate</strong><span data-i18n="d34">Double-click file → Install Certificate → pilih <em>Local Machine</em>.</span></li>
+                <li><strong data-i18n="s35">Choose Trusted Root Store</strong><span data-i18n="d36">Pilih "Place all certificates in the following store" → <em>Trusted Root Certification Authorities</em>.</span></li>
+                <li><strong data-i18n="s37">Run Notepad as Administrator</strong></li>
+                <li><strong data-i18n="s38">Open hosts file</strong><span data-i18n="d39">File → Open, lalu buka:</span>
                   <pre><code>C:\Windows\System32\drivers\etc\hosts</code></pre></li>
-                <li><strong>Add entries</strong>Paste di paling bawah, lalu Save (Ctrl + S).
+                <li><strong data-i18n="s40">Add entries</strong><span data-i18n="d41">Paste di paling bawah, lalu Save (Ctrl + S).</span>
                   <pre><code id="win-hosts" class="hosts-entries"></code></pre>
-                  <span class="copy"><button type="button" class="copy-btn" command="--copy" commandfor="win-hosts">Copy Hosts</button><span class="tip" role="status"></span></span></li>
-                <li><strong>Launch Growtopia</strong>Buka Growtopia lalu klik Play.</li>
+                  <span class="copy"><button data-i18n="c_copy_hosts" type="button" class="copy-btn" command="--copy" commandfor="win-hosts">Copy Hosts</button><span class="tip" role="status"></span></span></li>
+                <li><strong data-i18n="s42">Launch Growtopia</strong><span data-i18n="d43">Buka Growtopia lalu klik Play.</span></li>
               </ol>
             </div>
           </details>
@@ -134,17 +134,17 @@
             <summary><span class="platform-icon" aria-hidden="true"></span>macOS</summary>
             <div class="platform-body">
               <ol class="howto">
-                <li><strong>Download Certificate</strong>
-                  <a class="btn btn-blue small" href="https://www.lockps.online/host/lockps-root-ca.crt" target="_blank" rel="noopener">Download Lock PS Root CA</a></li>
-                <li><strong>Add to Keychain</strong>Buka certificate dengan Keychain Access, tambahkan ke keychain <em>System</em>.</li>
-                <li><strong>Enable Trust</strong>Double-click certificate → Trust → "When using this certificate" → <em>Always Trust</em>.</li>
-                <li><strong>Open Terminal</strong>Buka Terminal lewat Spotlight.</li>
-                <li><strong>Edit hosts file</strong>Jalankan:
+                <li><strong data-i18n="s44">Download Certificate</strong>
+                  <a data-i18n="b_download_lock_ps_root_ca" class="btn btn-blue small" href="https://www.lockps.online/host/lockps-root-ca.crt" target="_blank" rel="noopener">Download Lock PS Root CA</a></li>
+                <li><strong data-i18n="s45">Add to Keychain</strong><span data-i18n="d46">Buka certificate dengan Keychain Access, tambahkan ke keychain <em>System</em>.</span></li>
+                <li><strong data-i18n="s47">Enable Trust</strong><span data-i18n="d48">Double-click certificate → Trust → "When using this certificate" → <em>Always Trust</em>.</span></li>
+                <li><strong data-i18n="s49">Open Terminal</strong><span data-i18n="d50">Buka Terminal lewat Spotlight.</span></li>
+                <li><strong data-i18n="s51">Edit hosts file</strong><span data-i18n="d52">Jalankan:</span>
                   <pre><code>sudo nano /etc/hosts</code></pre></li>
-                <li><strong>Add entries</strong>Paste di paling bawah, lalu save dengan Ctrl+X, Y, Enter.
+                <li><strong data-i18n="s53">Add entries</strong><span data-i18n="d54">Paste di paling bawah, lalu save dengan Ctrl+X, Y, Enter.</span>
                   <pre><code id="mac-hosts" class="hosts-entries"></code></pre>
-                  <span class="copy"><button type="button" class="copy-btn" command="--copy" commandfor="mac-hosts">Copy Hosts</button><span class="tip" role="status"></span></span></li>
-                <li><strong>Launch Growtopia</strong>Buka Growtopia lalu klik Play.</li>
+                  <span class="copy"><button data-i18n="c_copy_hosts" type="button" class="copy-btn" command="--copy" commandfor="mac-hosts">Copy Hosts</button><span class="tip" role="status"></span></span></li>
+                <li><strong data-i18n="s55">Launch Growtopia</strong><span data-i18n="d56">Buka Growtopia lalu klik Play.</span></li>
               </ol>
             </div>
           </details>
@@ -153,27 +153,28 @@
 
       <!-- COMMUNITY -->
       <section id="community" class="section">
-        <h2 class="section-title">Our Community</h2>
+        <h2 data-i18n="h_comm" class="section-title">Our Community</h2>
         <div class="community">
           <a class="social whatsapp" href="https://chat.whatsapp.com/JSWf0gH6hj7BW78MgXp4Ah?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4&amp;iam=2" target="_blank" rel="noopener">
             <span class="social-icon" aria-hidden="true"></span>
-            <span><strong>WhatsApp</strong><small>Join grup WhatsApp</small></span>
+            <span><strong>WhatsApp</strong><small data-i18n="wa">Join grup WhatsApp</small></span>
           </a>
           <a class="social discord" href="https://discord.gg/Gqf7PgYZRZ" target="_blank" rel="noopener">
             <span class="social-icon" aria-hidden="true"></span>
-            <span><strong>Discord</strong><small>Join server Discord</small></span>
+            <span><strong>Discord</strong><small data-i18n="dc">Join server Discord</small></span>
           </a>
         </div>
       </section>
 
       <!-- RULES -->
       <section id="rules" class="section">
-        <h2 class="section-title">Rules</h2>
+        <h2 data-i18n="h_rules" class="section-title">Rules</h2>
         <ol class="card rules" id="rules-list"></ol>
       </section>
     </div>
   </main>
 
-  <script src="script.js?v=14"></script>
+  <script src="script.js?v=15"></script>
+  <script src="i18n.js?v=16"></script>
 </body>
 </html>
