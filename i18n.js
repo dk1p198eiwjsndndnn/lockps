@@ -3,7 +3,7 @@
 // Keys match data-i18n="..." in index.html. Values may contain <strong>/<em>.
 // To add a language: copy lang/en.json, translate the values, add it to LANGS and FLAGS below.
 const I18N = {};
-const I18N_VERSION = "18";
+const I18N_VERSION = "19";
 
 // ===== Language switcher =====
 // Indonesian is the default. Choice is kept in localStorage.
